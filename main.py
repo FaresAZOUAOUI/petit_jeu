@@ -4,9 +4,12 @@
 
 import random as rd
 
-''' Programme principal'''
+'''Declaration de classe et fonctions'''
 
 class Jeu :
     def __init__(self, n, m):
         self.k = rd.randint(0,m)
         self.n = n
+
+''' Programme principal'''
+
