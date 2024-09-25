@@ -34,7 +34,7 @@ class Jeu :
             return False
         else :
             print("Super tu as gagné t'es un monstre")
-            return True
+        return True
         
     def jouer(self) :
         ''' Cette méthode fait une boucle jusqu'à ce que le nombre d'essais maximum,n ,soit atteint
@@ -49,9 +49,10 @@ class Jeu :
                 k = int(input("Entre un nombre"))
                 self.test(k)
                 n += 1
-                print("Il vous reste", self.n,"essais")
+                print("Il vous reste", self.n - n,"essais")
             except ValueError :
                 print("Ceci n'est pas un entier")
+        print("Tu n'as plus d'essais, dommage")
 
 
 ''' Programme principal'''
@@ -59,3 +60,5 @@ class Jeu :
 if __name__ == '__main__' :
     import doctest
     doctest.testmod()
+
+Jeu(15,5).jouer()
